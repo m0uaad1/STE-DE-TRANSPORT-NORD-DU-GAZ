@@ -1,67 +1,249 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CAP Garland, LLC</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>STE DE TRANSPORT NORD DU GAZ — Transport & Logistique Casablanca</title>
+  <meta name="description" content="STE DE TRANSPORT NORD DU GAZ assure le transport industriel et logistique à Casablanca. Contactez-nous : support@riventad.shop ou 06 80 02 31 48."/>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f0f0;
-      color: #333;
+    :root {
+      --primary: #2563eb;
+      --accent: #1e293b;
+      --bg: #f8fafc;
+      --text: #111827;
+      --muted: #6b7280;
+      --radius: 14px;
     }
-    header {
-      background-color: #003366;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:"Poppins",sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
     }
-    section {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
+    header{
+      background:var(--accent);
+      color:white;
+      position:sticky;
+      top:0;
+      z-index:50;
+      box-shadow:0 4px 12px rgba(0,0,0,0.25);
     }
-    h1, h2 {
-      color: #003366;
+    .topbar{
+      max-width:1150px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:16px 24px;
     }
-    .contact {
-      background: #fff;
-      padding: 20px;
-      border-left: 5px solid #003366;
-      margin-top: 30px;
+    .brand{
+      font-weight:800;
+      font-size:1.3rem;
+      color:var(--primary);
+      letter-spacing:1px;
+      text-transform:uppercase;
     }
-    footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 50px;
+    nav{display:flex;gap:18px;}
+    nav a{
+      color:#e5e7eb;
+      text-decoration:none;
+      font-weight:600;
+      border-radius:8px;
+      padding:8px 12px;
+      transition:.3s;
+    }
+    nav a:hover{background:rgba(255,255,255,0.15);}
+    .hero{
+      max-width:1150px;
+      margin:auto;
+      padding:70px 24px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:28px;
+      align-items:center;
+    }
+    .hero h1{
+      font-size:clamp(30px,5vw,46px);
+      color:var(--primary);
+      margin-bottom:12px;
+    }
+    .hero p{color:var(--muted);font-size:1.05rem;}
+    .hero img{
+      border-radius:var(--radius);
+      box-shadow:0 14px 40px rgba(0,0,0,0.3);
+      width:100%;
+      object-fit:cover;
+    }
+    .btn{
+      background:var(--primary);
+      color:white;
+      padding:12px 18px;
+      border-radius:8px;
+      font-weight:700;
+      text-decoration:none;
+      display:inline-block;
+      margin-top:18px;
+      box-shadow:0 10px 25px rgba(37,99,235,0.3);
+      transition:.3s;
+    }
+    .btn:hover{background:#1d4ed8;transform:translateY(-3px);}
+    section{
+      max-width:1150px;
+      margin:auto;
+      padding:60px 24px;
+    }
+    h2{
+      font-size:clamp(22px,3vw,32px);
+      color:var(--accent);
+      margin-bottom:14px;
+    }
+    .muted{color:var(--muted);}
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:16px;
+      margin-top:20px;
+    }
+    .card{
+      background:white;
+      border-radius:var(--radius);
+      border:1px solid #e5e7eb;
+      padding:18px;
+      box-shadow:0 6px 14px rgba(0,0,0,0.05);
+      transition:transform .3s;
+    }
+    .card:hover{transform:translateY(-4px);}
+    .card h3{color:var(--primary);margin-top:0;}
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:14px;
+      margin-top:20px;
+    }
+    .gallery img{
+      border-radius:var(--radius);
+      aspect-ratio:4/3;
+      object-fit:cover;
+      transition:transform .3s;
+      width:100%;
+    }
+    .gallery img:hover{transform:scale(1.03);}
+    .gallery img:last-child{
+      width:70%;
+      margin:auto;
+      display:block;
+    }
+    .contact-box{
+      background:linear-gradient(135deg,var(--accent),var(--primary));
+      color:white;
+      border-radius:var(--radius);
+      padding:24px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    }
+    .contact-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:10px;
+    }
+    .contact-actions{
+      margin-top:14px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .contact-actions a{
+      background:white;
+      color:var(--accent);
+      padding:10px 14px;
+      border-radius:8px;
+      font-weight:700;
+      text-decoration:none;
+      box-shadow:0 8px 24px rgba(0,0,0,0.1);
+      transition:.3s;
+    }
+    .contact-actions a:hover{transform:translateY(-3px);}
+    footer{
+      background:var(--accent);
+      color:#e5e7eb;
+      text-align:center;
+      padding:20px;
+    }
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr;text-align:center;}
+      nav{display:none;}
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>CAP Garland, LLC</h1>
-    <p>Private Investment Fund</p>
-  </header>
 
-  <section>
-    <h2>About Us</h2>
-    <p>CAP Garland, LLC is a Washington-based private investment fund focused on delivering value through diversified investment strategies.</p>
+<header>
+  <div class="topbar">
+    <div class="brand">STE DE TRANSPORT NORD DU GAZ</div>
+    <nav>
+      <a href="#about">À propos</a>
+      <a href="#services">Services</a>
+      <a href="#gallery">Galerie</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-    <h2>Contact</h2>
-    <div class="contact">
-      <p><strong>Address:</strong> 915 W 2nd Ave, Spokane, WA 99201</p>
-      <p><strong>Email:</strong> <a href="mailto:ryanberg@capgarland.shop">ryanberg@capgarland.shop</a></p>
-      <p><strong>Phone:</strong> (509) 822-3850</p>
+<section class="hero">
+  <div>
+    <h1>Transport Industriel et Logistique</h1>
+    <p><strong>STE DE TRANSPORT NORD DU GAZ</strong> est une société basée à Casablanca, spécialisée dans le transport industriel, logistique et la distribution du gaz. Nous mettons à disposition une flotte moderne et un service fiable partout au Maroc.</p>
+    <a href="#contact" class="btn">Nous Contacter</a>
+    <p class="muted" style="margin-top:14px;">support@riventad.shop • +212 680 023 148</p>
+    <p class="muted">Casablanca, Maroc</p>
+  </div>
+  <img src="https://t3.ftcdn.net/jpg/00/31/70/64/360_F_31706467_zDKiWBvcad8unfdKbNC8xubfY5RkpXDf.jpg" alt="Camion de transport Casablanca">
+</section>
+
+<section id="about">
+  <h2>À propos de nous</h2>
+  <p class="muted"><strong>STE DE TRANSPORT NORD DU GAZ</strong> accompagne les entreprises dans leurs besoins logistiques et de transport à travers des solutions modernes, sécurisées et respectueuses des délais.</p>
+  <div class="cards">
+    <div class="card"><h3>Transport de Gaz</h3><p>Flotte équipée pour le transport sécurisé de gaz et produits industriels.</p></div>
+    <div class="card"><h3>Logistique Moderne</h3><p>Gestion efficace et planification optimale des trajets pour une livraison rapide.</p></div>
+    <div class="card"><h3>Service National</h3><p>Opérations dans toutes les grandes villes marocaines avec un suivi en temps réel.</p></div>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>Galerie</h2>
+  <div class="gallery">
+    <img src="https://t3.ftcdn.net/jpg/00/31/70/64/360_F_31706467_zDKiWBvcad8unfdKbNC8xubfY5RkpXDf.jpg" alt="Camion sur la route">
+    <img src="https://www.ergenya.it/wp-content/uploads/2023/12/truck-840x840.jpg" alt="Flotte de transport">
+    <img src="https://mf.b37mrtl.ru/russian/images/e/9/b/e9be58fe7e4aaad900f0033ea437f347c141ea37_article.jpg" alt="Camions en service">
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact-box">
+    <div class="contact-grid">
+      <div><strong>Entreprise:</strong> STE DE TRANSPORT NORD DU GAZ</div>
+      <div><strong>Téléphone:</strong> +212 680 023 148</div>
+      <div><strong>Email:</strong> support@riventad.shop</div>
+      <div style="grid-column:1/-1;"><strong>Adresse:</strong> Casablanca, Maroc</div>
     </div>
-  </section>
+    <div class="contact-actions">
+      <a href="mailto:support@riventad.shop">Email</a>
+      <a href="tel:+212680023148">Appeler</a>
+      <a href="https://wa.me/212680023148" target="_blank">WhatsApp</a>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    &copy; 2025 CAP Garland, LLC. All rights reserved.
-  </footer>
+<footer>
+  © <span id="year"></span> STE DE TRANSPORT NORD DU GAZ — Tous droits réservés.
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
